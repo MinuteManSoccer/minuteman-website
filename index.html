@@ -608,10 +608,27 @@ function switchTab(tab) {
   document.getElementById('panel-group').classList.toggle('active', tab==='group');
 }
 const athletes = {
-  Soccer:['Any available athlete','Athletes coming soon'],
-  Lacrosse:['Any available athlete','Athletes coming soon'],
-  Football:['Any available athlete','Athletes coming soon'],
-  Basketball:['Any available athlete','Athletes coming soon']
+  // To add an athlete later: add a new string "Name — Tier" inside the array for their sport, then commit.
+  Soccer: [
+    'Any available athlete',
+    'Thomas Pretty — Varsity Captain',
+    'Nico Reyna — Varsity Captain',
+    'Noah Rossoni — Varsity Captain',
+    "Jack D'Amore — Varsity Captain",
+    'Adrian Rodriguez — State Championship Athlete'
+  ],
+  Lacrosse: [
+    'Any available athlete',
+    'Max Hill — D1 NCAA Athlete'
+  ],
+  Football: [
+    'Any available athlete'
+    // No athletes confirmed available yet — add here in the same format when ready
+  ],
+  Basketball: [
+    'Any available athlete'
+    // No athletes added yet
+  ]
 };
 function updateAthletes() {
   const sport = document.getElementById('sport-select').value;
