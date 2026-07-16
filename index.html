@@ -82,7 +82,24 @@ h2.section-title{font-family:var(--serif);font-size:clamp(2rem,4vw,2.8rem);color
 .sport-emoji{font-size:2rem;line-height:1}
 .sport-card h3{font-family:var(--serif);font-size:1.5rem;color:var(--navy)}
 .sport-card p{font-size:.9rem;color:var(--muted);line-height:1.65}
-
+  
+/* ATHLETES */
+.athletes{background:var(--white)}
+.athletes-group{margin-bottom:3rem}
+.athletes-group:last-child{margin-bottom:0}
+.athletes-group h3{font-family:var(--serif);font-size:1.4rem;color:var(--navy);margin-bottom:1.25rem;display:flex;align-items:center;gap:.6rem}
+.athlete-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:1.25rem}
+.athlete-card{background:var(--off);border:1px solid var(--border);border-radius:14px;padding:1.5rem;display:flex;flex-direction:column;gap:.5rem;transition:transform .2s,box-shadow .2s}
+.athlete-card:hover{transform:translateY(-3px);box-shadow:0 12px 40px rgba(13,31,60,.08)}
+.athlete-card h4{font-size:1.05rem;font-weight:600;color:var(--navy)}
+.athlete-tier{display:inline-flex;align-items:center;gap:6px;font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:4px 10px;border-radius:4px;width:fit-content}
+.athlete-tier.tier-d1{background:#E8EDF5;color:#0D1F3C}
+.athlete-tier.tier-d3{background:#E8EDF5;color:#162E52}
+.athlete-tier.tier-cap{background:#F0EDE6;color:#6B5A2A}
+.athlete-tier.tier-state{background:#EDF2ED;color:#2A4A2E}
+.athlete-card .athlete-position{font-size:.85rem;color:var(--muted)}
+.athlete-card.placeholder{align-items:center;justify-content:center;text-align:center;color:var(--muted);border-style:dashed}
+  
 /* HOW WE DO IT */
 .howwedoit{background:var(--white)}
 .model-grid{display:grid;grid-template-columns:1fr 1fr;gap:2rem;margin-top:3.5rem}
@@ -205,7 +222,8 @@ h1.hero-title{animation:fadeUp .7s .1s ease both}
       <li><a href="#about">About</a></li>
       <li><a href="#howwedoit">How We Do It</a></li>
       <li><a href="#pricing">Pricing</a></li>
-      <li><a href="#sports">Sports</a></li>
+<li><a href="#sports">Sports</a></li>
+      <li><a href="#athletes">Athletes</a></li>
       <li><a href="#contact">Contact</a></li>
       <li><a href="#contact" class="nav-cta">Book a Session</a></li>
     </ul>
@@ -275,7 +293,76 @@ h1.hero-title{animation:fadeUp .7s .1s ease both}
     </div>
   </div>
 </section>
+  
+<!-- ATHLETES -->
+<section class="athletes" id="athletes">
+  <div class="section-inner">
+    <div class="section-label">Meet the Team</div>
+    <h2 class="section-title">Our Athletes.</h2>
+    <p class="section-sub">Every coach on our roster has competed at an elite level &mdash; state champions, varsity captains, and Division I athletes ready to train the next generation.</p>
 
+    <div class="athletes-group" style="margin-top:3rem">
+      <h3>&#9917; Soccer</h3>
+      <div class="athlete-grid">
+        <div class="athlete-card">
+          <span class="athlete-tier tier-cap">&#128081; Varsity Captain</span>
+          <h4>Thomas Pretty</h4>
+          <p class="athlete-position">Defense &middot; State Champion, FCIAC Champion</p>
+        </div>
+        <div class="athlete-card">
+          <span class="athlete-tier tier-cap">&#128081; Varsity Captain</span>
+          <h4>Nico Reyna</h4>
+          <p class="athlete-position">Midfield &middot; State Champion, FCIAC Champion</p>
+        </div>
+        <div class="athlete-card">
+          <span class="athlete-tier tier-cap">&#128081; Varsity Captain</span>
+          <h4>Noah Rossoni</h4>
+          <p class="athlete-position">Midfield &middot; State Champion, FCIAC Champion</p>
+        </div>
+        <div class="athlete-card">
+          <span class="athlete-tier tier-cap">&#128081; Varsity Captain</span>
+          <h4>Jack D&rsquo;Amore</h4>
+          <p class="athlete-position">Goalkeeper &middot; Class LL CIAC Champion, FCIAC Champion</p>
+        </div>
+        <div class="athlete-card">
+          <span class="athlete-tier tier-state">&#127960; State Championship Athlete</span>
+          <h4>Adrian Rodriguez</h4>
+          <p class="athlete-position">Attack &middot; All FCIAC First Team, State Champion</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="athletes-group">
+      <h3>&#129357; Lacrosse</h3>
+      <div class="athlete-grid">
+        <div class="athlete-card">
+          <span class="athlete-tier tier-d1">&#127942; D1 NCAA Athlete</span>
+          <h4>Max Hill</h4>
+          <p class="athlete-position">Defense &middot; Yale, Incoming Freshman</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="athletes-group">
+      <h3>&#127944; Football</h3>
+      <div class="athlete-grid">
+        <div class="athlete-card placeholder">
+          <p>Trainers coming soon</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="athletes-group">
+      <h3>&#127936; Basketball</h3>
+      <div class="athlete-grid">
+        <div class="athlete-card placeholder">
+          <p>Trainers coming soon</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+  
 <!-- HOW WE DO IT -->
 <section class="howwedoit" id="howwedoit">
   <div class="section-inner">
@@ -578,7 +665,8 @@ h1.hero-title{animation:fadeUp .7s .1s ease both}
           <li><a href="#about">About Us</a></li>
           <li><a href="#howwedoit">How We Do It</a></li>
           <li><a href="#pricing">Pricing</a></li>
-          <li><a href="#sports">Sports</a></li>
+         <li><a href="#sports">Sports</a></li>
+          <li><a href="#athletes">Athletes</a></li>
           <li><a href="#contact">Book a Session</a></li>
         </ul>
       </div>
